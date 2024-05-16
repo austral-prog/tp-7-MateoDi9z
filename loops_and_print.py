@@ -1,6 +1,19 @@
-def enumerate_list(list):
-    return list
+def enumerate_list(lista: list[str]):
+    newArray = []
 
+    for el in lista:
+        if not el:
+            continue
+        newArray.append(f"{len(newArray)}. {el}")
 
-def enumerate_backwards(list):
-    return list
+    return newArray
+
+def enumerate_backwards(lista: list[str]):
+    newArray = []
+
+    for el in lista:
+        if not el:
+            continue
+        newArray.append(f"{len(newArray)}. {el[::-1]}")
+
+    return newArray
